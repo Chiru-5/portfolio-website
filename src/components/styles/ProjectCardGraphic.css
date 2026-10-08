@@ -1,0 +1,135 @@
+.project-graphic-card {
+  width: 100%;
+  height: 240px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-graphic-card:hover {
+  border-color: var(--accentColor, #c2a4ff);
+  box-shadow: 0 12px 35px rgba(194, 164, 255, 0.25), inset 0 0 20px rgba(194, 164, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Background Glowing Orbs */
+.project-graphic-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.35;
+  top: -30px;
+  right: -30px;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.project-graphic-card:hover .project-graphic-glow {
+  opacity: 0.6;
+}
+
+/* Specific Glow Themes */
+.theme-patient .project-graphic-glow {
+  background: #3b82f6;
+}
+.theme-lawezy .project-graphic-glow {
+  background: #a855f7;
+}
+.theme-ecommerce .project-graphic-glow {
+  background: #10b981;
+}
+.theme-cpuscheduler .project-graphic-glow {
+  background: #f59e0b;
+}
+.theme-default .project-graphic-glow {
+  background: #c2a4ff;
+}
+
+/* Card Header */
+.project-graphic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.project-graphic-category {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-graphic-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Body Tech Visual */
+.project-graphic-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+.project-graphic-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.project-graphic-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card Footer Badges */
+.project-graphic-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  z-index: 2;
+}
+
+.project-graphic-tech-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
